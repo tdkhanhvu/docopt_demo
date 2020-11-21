@@ -10,10 +10,15 @@ Options:
 [--arg3=<arg3>]   Takes any value (this is an optional option)
 [--arg4=<arg4>]   Takes any value (this is an optional option)
 " -> doc
-
 library(docopt)
-opt <- docopt(doc)
-print(opt)
-print(typeof(opt))
 
-print(opt$arg4)
+main <- function(opt) {
+    print(opt)
+    print(typeof(opt))
+
+    print(opt$arg4)
+}
+
+opt <- docopt(doc)
+main(opt)
+
